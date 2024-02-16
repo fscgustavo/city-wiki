@@ -55,6 +55,7 @@ export function CityTableFilters() {
 				</label>
 				<Input
 					id="maxPopulation"
+					name="maxPopulation"
 					type="number"
 					className="h-8 lg:w-48"
 					min={0}

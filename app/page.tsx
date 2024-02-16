@@ -79,15 +79,13 @@ export default async function CityPage({
 												{city.population}
 											</TableCell>
 											<TableCell>
-												<Button
-													variant="outline"
-													size="xs"
-													aria-label={`see more about the city ${city.city}`}
-													asChild
-												>
+												<Button variant="outline" size="xs" asChild>
 													<Link href={`/city/${city.wikiDataId}`}>
 														<ArrowUpRight className="h-3 w-3 mr-2" />
-														See more
+														<span aria-hidden>See more</span>
+														<span className="sr-only">
+															See see more about the city ${city.city}
+														</span>
 													</Link>
 												</Button>
 											</TableCell>

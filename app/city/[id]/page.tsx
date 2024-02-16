@@ -1,6 +1,7 @@
 "use server";
 
 import { GoogleMapsEmbed } from "@next/third-parties/google";
+import { Suspense } from "react";
 
 import { BackButton } from "@/components/back-button";
 import { env } from "@/env";
@@ -47,14 +48,16 @@ export default async function CityDetailsPage({ params }: CityDetailsProps) {
 				}}
 				className="mb-5"
 			/>
-
-			<GoogleMapsEmbed
-				apiKey={env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}
-				height={600}
-				width="100%"
-				mode="place"
-				q={`${city?.data.name}, ${city?.data.region}, ${city?.data.country}`}
-			/>
+			<Suspense>
+				<GoogleMapsEmbed
+					apiKey={env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}
+					height={600}
+					width="100%"
+					mode="place"
+					q={`${city?.data.name}, ${city?.data.region}, ${city?.data.country}`}
+					loading="lazy"
+				/>
+			</Suspense>
 		</main>
 	);
 }
