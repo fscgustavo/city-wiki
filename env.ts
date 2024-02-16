@@ -1,0 +1,19 @@
+import { z } from 'zod'
+
+const envSchema = z.object({
+    NEXT_PUBLIC_GEO_DOMAIN: z.string().url(),
+    NEXT_PUBLIC_CHATGBT_DOMAIN: z.string().url(),
+    NEXT_PUBLIC_RAPID_API_KEY: z.string(),
+    NEXT_PUBLIC_RAPID_GEO_HOST: z.string(),
+    NEXT_PUBLIC_RAPID_CHATGBT_HOST: z.string(),
+    NEXT_PUBLIC_GOOGLE_MAPS_KEY: z.string(),
+})
+
+export const env = envSchema.parse({
+    NEXT_PUBLIC_GEO_DOMAIN: process.env.NEXT_PUBLIC_GEO_DOMAIN,
+    NEXT_PUBLIC_CHATGBT_DOMAIN: process.env.NEXT_PUBLIC_CHATGBT_DOMAIN,
+    NEXT_PUBLIC_RAPID_API_KEY: process.env.NEXT_PUBLIC_RAPID_API_KEY,
+    NEXT_PUBLIC_RAPID_GEO_HOST: process.env.NEXT_PUBLIC_RAPID_GEO_HOST,
+    NEXT_PUBLIC_RAPID_CHATGBT_HOST: process.env.NEXT_PUBLIC_RAPID_CHATGBT_HOST,
+    NEXT_PUBLIC_GOOGLE_MAPS_KEY: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY,
+});
