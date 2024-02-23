@@ -7,7 +7,7 @@ export default function Error() {
 		<main>
 			<div className="flex flex-col gap-5 mx-auto max-w-5xl h-[50vh]">
 				<BackButton />
-				<div className="flex flex-col flex-1 items-center justify-center gap-2">
+				<div className="flex flex-col flex-1 items-center justify-center gap-2 text-center">
 					<h1 className="text-4xl font-bold">Error :&#40;</h1>
 					<p className="text-accent-foreground">
 						<button

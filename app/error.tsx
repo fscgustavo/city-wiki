@@ -8,7 +8,7 @@ export default function Error() {
 			<h1 className="text-3xl font-bold tracking-tight">US Cities</h1>
 
 			<CityTableFilters />
-			<div className="flex flex-col flex-1 items-center justify-center gap-2">
+			<div className="flex flex-col flex-1 items-center justify-center gap-2 text-center">
 				<h1 className="text-4xl font-bold">Error :&#40;</h1>
 				<p className="text-accent-foreground">
 					<button
