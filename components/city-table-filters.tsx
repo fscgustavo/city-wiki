@@ -11,7 +11,7 @@ export function CityTableFilters() {
 	const searchParams = useSearchParams();
 
 	function filterAction(formData: FormData) {
-		const params = new URLSearchParams(searchParams.toString());
+		const params = new URLSearchParams();
 
 		const filterData = {
 			minPopulation: formData.get("minPopulation")?.toString(),
