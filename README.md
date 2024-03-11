@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The project is about a challenge I received during a job application process and it is related to US cities.
 
-## Getting Started
+## The Challenge
 
-First, run the development server:
+- Design individual web pages for each city.
+- Fetch data like population, area, and attractions using an API.
+- Summarize the data using an AI tool.
+- Integrate the summaries into the web pages.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## My Approach
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Design: I created a clean and responsive web page template to display city information.
+Data Acquisition: I used a public API to retrieve relevant data for the US cities.
+Data Processing: I integrated an AI tool to analyze the fetched data and generate summaries for each city.
+Presentation: I incorporated the AI-generated summaries into the corresponding city web pages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Beyond the Basics
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- I ensured the code was well-documented, followed best practices, and handled potential errors gracefully.
+- The web pages are accessible and responsive to different screen sizes.
+- All the results are cached by demand. Once a user sees a page never accessed before, he will see a loading fallback, but after the result will be cached and everyone will see instant results when the page is accessed. 
